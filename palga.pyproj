@@ -21,7 +21,14 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="modul.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="palga.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="inimesed.txt" />
+    <Content Include="palgad.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
