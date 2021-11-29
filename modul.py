@@ -61,7 +61,7 @@ def biggest_salary():
 	print("kõike suured palga on "+inimesed[b]+" palga")
 
 def smallest_salary():
-	"""вычисление самой маленькой зарплаты (готово)
+	"""вычисление самой маленькой зарплаты (готово?)
 	"""
 	palgad=[]
 	with open("palgad.txt", "r") as f1:
@@ -123,6 +123,8 @@ def search_name():
 			print("nimi ei ole")
 
 def tulumaks():
+	"""Вычисление зарплвты с налогом(Готово)
+	"""
 	palgad=[]
 	with open("palgad.txt", "r") as f1:
 		for s in f1:
@@ -135,22 +137,23 @@ def tulumaks():
 	if nimi in inimesed:
 		a=inimesed.index(nimi)
 		b=palgad[a]
-		if b<=1200 or b==1200:
-			с=b-500
-			if c==0 or c<=0:
-				ans="käes palk on "+round(b,2)
+		b=float(b)
+		if b<=1200:
+			h=b-500
+			if h==0 or h<0:
+				ans="käes palk on "+str(round(b,2))
 			else:
-				d=c*0.016
+				d=h*0.2
 				e=b-d
-				ans="käes palk on"+round(e,2)
-		elif b>=1200 or b==1201:
+				ans="käes palk on"+str(round(e,2))
+		elif b>=1200:
 			e=500-0.55556*(b-1200)
 			d=b-e
-			c=d*0.016
+			c=d*0.2
 			f=b-c	
-			ans="käes palk on"+round(f,2)
+			ans="käes palk on"+str(round(f,2))
 		else:
-			e=b*0.016
+			e=b*0.2
 			a=b-e
-			ans="käes palk on"+round(a,2)
-		ans="käes palk on "+round(d,2)
+			ans="käes palk on"+str(round(a,2))
+		print(ans)
