@@ -55,7 +55,6 @@ def biggest_salary():
 	f.close
 	palgadS=palgad.copy()
 	palgadS.sort()
-	palgadS.reverse()
 	a=palgadS[0]
 	b=palgad.index(a)
 	print("kõike suured palga on "+inimesed[b]+" palga")
@@ -73,9 +72,10 @@ def smallest_salary():
 			inimesed.append(q.strip())
 	palgadS=palgad.copy()
 	palgadS.sort()
+	palgadS.reverse()
 	a=palgadS[0]
 	b=palgad.index(a)
-	print("kõike suured palga on "+inimesed[b]+" palga ja see on "+ palgadS[0]+" euro")
+	print("kõike väiksem palga on "+inimesed[b]+" palga ja see on "+ palgadS[0]+" euro")
 
 def sorting():
 	"""сортировка зарполат с именами в порядке возрастания (готово)		p.s. чтобы сделать в порядке убывания добавить сточку palgadS.reverse() после palgadS.sort() 
