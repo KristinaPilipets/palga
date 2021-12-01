@@ -26,17 +26,17 @@ def delete_person ():
 	"""
 	palgad,inimesed=lists() #открытие файлов и использывание списка через функцию/ avame failid ja kasutamine lsitid 
 	nimi=input("Siseta nimi: ")
-	if nimi not in inimesed: #проверка есть ли такой человек в списке
-		print("Kas sa tahad lisada nimi ja palgad?") #если нет предлагаем зарегестрировать/добавить имя и зарплату
+	if nimi not in inimesed: #проверка есть ли такой человек в списке/ kontrollime kui nimi on listis
+		print("Kas sa tahad lisada nimi ja palgad?") #если нет предлагаем зарегестрировать/добавить имя и зарплату /kui nimi ei ole listis küsida kui taha registreerida
 		c=input("Y = jah, N = ei")
 		if c.upper=="Y":
-			add_person() #перенаправляем в функцию добавления 
+			add_person() #перенаправляем в функцию добавления / kasutame funktsioon kus me registreerime nimi ja palk
 		else:
 			pass
 	else:
-		a=inimesed.index(nimi) # если имя есть в списке ищем индекс 
-		inimesed.pop(a) #удаляем по индексу имя
-		palgad.pop(a) #удаляем по индексу
+		a=inimesed.index(nimi) # если имя есть в списке ищем индекс /otsing nimi indeks
+		inimesed.pop(a) #удаляем по индексу имя/ kusutata nimi
+		palgad.pop(a) #удаляем по индексу / kusutata palk
 	f=open("inimesed.txt", "w")
 	for g in inimesed:
 		f.write(g+"\n")
