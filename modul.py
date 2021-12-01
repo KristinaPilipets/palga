@@ -116,7 +116,7 @@ def tulumaks():
 	"""
 	palgad,inimesed=lists()
 	nimi=input("Siseta nimi keda palk te tahate arvutada: ")
-	if nimi in inimesed:
+	if nimi in inimesed: 
 		a=inimesed.index(nimi)
 		b=palgad[a]
 		b=float(b)
@@ -147,7 +147,7 @@ def keskmine():
 	summa=0
 	for palk in palgad:
 		summa+=float(palk)
-	kesk=summa/len(palgad)
+	kesk=summa/len(palgad)#вычисляем среднюю зарплату
 	print("keskmine palk "+kesk)
 	vahe=0
 	if kesk in palgad:
