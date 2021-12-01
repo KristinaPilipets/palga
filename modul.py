@@ -1,5 +1,5 @@
 def lists()->list:
-	"""Из файла делаем список
+	"""Из файла делаем список/tegi listid failist
 	"""
 	palgad=[]
 	with open("palgad.txt", "r") as f1:
