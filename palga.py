@@ -1,6 +1,6 @@
 from modul import*
 while True:
-	a=input("Funktsioonid: lisama-1, kastuta-2, suurim palk-3, vähim palk-4, sorteerimine-5, saama palk-6, otsing-7, tulumaks-8")
+	a=input("Funktsioonid: lisama-1, kastuta-2, suurim palk-3, vähim palk-4, sorteerimine-5, saama palk-6, otsing-7, tulumaks-8, keskmine palk-9, lõpetanud-E")
 	if a=="1":
 		add_person()
 	elif a=="2":
