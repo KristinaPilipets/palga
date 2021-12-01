@@ -1,4 +1,4 @@
-def lists():
+def lists()->list:
 	"""Из файла делаем список
 	"""
 	palgad=[]
