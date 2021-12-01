@@ -2,9 +2,9 @@ def lists()->list:
 	"""Из файла делаем список/tegi listid failist
 	"""
 	palgad=[]
-	with open("palgad.txt", "r") as f1:
+	with open("palgad.txt", "r") as f1: #avame fail
 		for s in f1:
-			palgad.append(s.strip())
+			palgad.append(s.strip()) # tegi listid
 	inimesed=[]
 	with open ("inimesed.txt", "r") as inimene:
 		for q in inimene:
@@ -16,15 +16,15 @@ def add_person ():
 	"""
 	nimi=input("Siseta nimi: ")
 	palga=input("Siseta palgad: ")
-	with open("inimesed.txt", "a") as inimesed: #Добавляем человека в конец файла
+	with open("inimesed.txt", "a") as inimesed: #Добавляем человека в конец файла/lisame nimi failisse 
 		inimesed.write(nimi+"\n")	
-	with open("palgad.txt", "a") as palgad: #Добавляем зарплату в конец файла
+	with open("palgad.txt", "a") as palgad: #Добавляем зарплату в конец файла/lisame palk failisse
 		palgad.write(palga+"\n")
 
 def delete_person ():
 	"""Удаление человека и зарплаты (готово)
 	"""
-	palgad,inimesed=lists() #открытие файлов и использывание списка через функцию
+	palgad,inimesed=lists() #открытие файлов и использывание списка через функцию/ avame failid ja kasutamine lsitid 
 	nimi=input("Siseta nimi: ")
 	if nimi not in inimesed: #проверка есть ли такой человек в списке
 		print("Kas sa tahad lisada nimi ja palgad?") #если нет предлагаем зарегестрировать/добавить имя и зарплату
